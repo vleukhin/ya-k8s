@@ -1,5 +1,5 @@
 ## Yandex.Cloud
-variable "yc_token" {
+variable "yc_key" {
   type = string
   description = "Yandex Cloud API key"
 }
@@ -29,7 +29,7 @@ terraform {
 }
 
 provider "yandex" {
-  service_account_key_file = var.yc_key
+  service_account_key_file     = var.yc_key
   cloud_id  = var.yc_cloud_id
   folder_id = var.yc_folder_id
   zone      = var.yc_region
